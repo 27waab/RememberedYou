@@ -53,8 +53,8 @@ header {
     padding: 10px 0;
 }
 #addBtn {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ header {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 22px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 3;
     transition: 350ms;
@@ -75,19 +75,21 @@ header {
 }
 .items {
     position: fixed;
-    bottom: 0px;
-    right: 20px;
+    bottom: 0;
+    right: 0;
     transition: 350ms;
+    border: 1px solid #000;
+    transform: rotate(-15deg) scale(0.5);
 }
 .item {
-    width: 150px;
+    width: 180px;
     position: fixed;
     bottom: 25px;
     right: 20px;
     z-index: 4;
     padding: 5px 10px;
     border-radius: 99999px;
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -109,16 +111,19 @@ header {
 .item:last-child {
     background-color: #000;
 }
+.items.open {
+    transform: rotate(0deg) scale(1);
+}
 .items.open .item {
     opacity: 1;
     pointer-events: auto;
 }
 .items.open .item:first-child {
-    bottom: 170px;
+    bottom: 200px;
 }
 .items.open .item:nth-child(2) {
-    bottom: 125px;
+    bottom: 150px;
 }
 .items.open .item:last-child {
-    bottom: 80px;
+    bottom: 100px;
 }
