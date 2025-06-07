@@ -127,3 +127,57 @@ header {
 .items.open .item:last-child {
     bottom: 100px;
 }
+section {
+    padding: 20px 0;
+}
+section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+section .box {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+section .box .type {
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+.moduleOfNewItems {
+    position: absolute;
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 350ms;
+}
+.moduleOfNewItems.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.moduleOfNewItems h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.moduleOfNewItems .form-floating {
+    margin-bottom: 15px;
+}
+.moduleOfNewItems button {
+    position: relative;
+    left: calc(-50% + 20px);
+    margin-bottom: 20px;
+}
